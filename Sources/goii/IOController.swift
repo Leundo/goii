@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  IOController.swift
 //  
 //
 //  Created by Lzzet on 2021/12/24.
@@ -22,6 +22,7 @@ class IOController {
     }
     
     static var saveFilePath = "./";
+    static var inputFilePath = "";
     static var inputMode = InputMode.mockData
     static var buffer = [String]()
     static var mockData = """
@@ -51,6 +52,14 @@ extension IOController {
     static func initBuffer() {
         if (inputMode == .mockData) {
             buffer = mockData.components(separatedBy: "\n")
+        } else if (inputMode == .file) {
+            let fileUrl = URL(fileURLWithPath: inputFilePath)
+            do {
+                buffer = (try String(contentsOf: fileUrl, encoding: .utf8)).components(separatedBy: "\n")
+            }
+            catch {
+                IOController.log("\(error)", .error)
+            }
         }
     }
     
@@ -99,7 +108,6 @@ extension IOController {
         }
         catch {
             IOController.log("Fail to write read into \(fileUrl)", .error)
-            
         }
         return text
     }

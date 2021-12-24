@@ -81,10 +81,18 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "ep"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "fl"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "/Users/lzzet/Notebook/Nihongo"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/lzzet/Notebook/Nihongo/test.txt"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

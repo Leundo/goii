@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  GoiController.swift
 //  
 //
 //  Created by Lzzet on 2021/12/24.
@@ -93,7 +93,6 @@ extension GoiController {
                     setTranslation(text, i, j)
                     
                 }
-//                print(goi.toInfo())
             }
             
             if (GoiController.commands[text] == nil) {
