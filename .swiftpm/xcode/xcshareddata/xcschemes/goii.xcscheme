@@ -76,6 +76,14 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
+            argument = "kb"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "ep"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "/Users/lzzet/Notebook/Nihongo"
             isEnabled = "YES">
          </CommandLineArgument>

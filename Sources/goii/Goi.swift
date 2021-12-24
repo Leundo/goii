@@ -21,11 +21,6 @@ struct Goi: Codable {
         case ichidanDoushi = "一段動詞"
         case sahenDoushi = "サ変動詞"
         
-//        var description: String {
-//            get {
-//                return self.rawValue
-//            }
-//        }
     }
     
     struct Meaning: Codable {
@@ -154,4 +149,9 @@ extension Goi {
         return jsonString
     }
     
+    static func fromJson(_ jsonString: String) -> Goi {
+        let jsonData = jsonString.data(using: .utf8)!
+        let decoder = JSONDecoder()
+        return try! decoder.decode(Goi.self, from: jsonData)
+    }
 }

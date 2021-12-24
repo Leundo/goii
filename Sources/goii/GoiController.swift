@@ -57,7 +57,14 @@ extension GoiController {
     }
     
     func run() {
-        let text = IOController.scanf()
+        var text: String? = nil
+        do {
+            try text = IOController.scanf()
+        } catch {
+            IOController.log("\(error)", .error)
+            return
+        }
+        
         if let text = text?.trimmingCharacters(in: .whitespaces) {
             if (GoiController.commands[text] == nil) {
                 switch focus {
@@ -145,7 +152,7 @@ extension GoiController {
                 goi.addAccent(accent)
             } else {
                 undo()
-                IOController.log("Fail to convert \"\(item)\" to accent. Please try again.", .error)
+                IOController.log("Fail to convert \"\(item)\" to accent. Please try again.", .warning)
                 return
             }
         }
@@ -160,7 +167,7 @@ extension GoiController {
                 goi.addCategory(category)
             } else {
                 undo()
-                IOController.log("Fail to convert \"\(item)\" to category. Please try again.", .error)
+                IOController.log("Fail to convert \"\(item)\" to category. Please try again.", .warning)
                 return
             }
         }
@@ -187,7 +194,7 @@ extension GoiController {
                 goi.newAndSetExplanation(String(text.dropFirst(Config.explanationPrefix.count)).trimmingCharacters(in: .whitespaces))
             } else {
                 undo()
-                IOController.log("Fail to read the prefix of explanation.", .error)
+                IOController.log("Fail to read the prefix of explanation.", .warning)
                 return
             }
         }

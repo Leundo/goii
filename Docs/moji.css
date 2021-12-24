@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    background-color: #161D23;
+}
+
+.tango-card {
+    margin: 0 16px;
+}
+
+.pron-hiragana {
+    margin-right: 16px;
+}
+
+.tango-card-head {
+    background-color: #161D23;
+    padding: 16px 0 16px 16px;
+}
+
+.spell {
+    color: #fff;
+    font-size: 2.5714em;
+}
+
+.head-subline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 16px;
+    margin-bottom: 0px;
+}
+
+.pron {
+    color: #a4a4a5;
+    font-size: 1.1429em;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tag {
+    background-color: #FF5C78;
+    color: #161D23;
+}
+
+.tag-box {
+    background-color: #161D23;
+    padding-bottom: 32px;
+    padding-left: 16px;
+}
+
+.tag {
+    font-size: 0.8671em;
+    padding: 4px 16px;
+    margin: 0 16px 0 0;
+    border-radius: 50px;
+}
+
+.tango-card-tab {
+    width: 100%;
+    padding-bottom: 16px;
+    background-color: #161D23;
+}
+
+.explain {
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.explain-word {
+    padding: 16px 16px 16px 16px;
+    font-size: 1.1429em;
+    line-height: 1.45em;
+}
+
+.example {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 16px;
+    margin-bottom: 24px;
+}
+
+.example-info {
+    margin-right: 16px;
+}
+
+.example-jp {
+    color: #fff;
+    font-size: 1.1429em;
+}
+
+.example-zh {
+    color: #8B8787;
+    font-size: 1em;
+}
+
+.explain {
+    color: #fff;
+    background-color: #3d454c;
+}
