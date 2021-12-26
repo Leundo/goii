@@ -23,7 +23,7 @@ class IOController {
     
     static var saveFilePath = "./";
     static var inputFilePath = "";
-    static var inputMode = InputMode.mockData
+    static var inputMode = InputMode.keyboard
     static var buffer = [String]()
     static var mockData = """
 遊ぶ

@@ -35,6 +35,9 @@ class Config {
         "三类动词": .sahenDoushi,
         "v3": .sahenDoushi,
         
+        "カ変動詞": .kahenDoushi,
+        "カ变动词": .kahenDoushi,
+        
         "形容動詞": .keiyouDoushi,
         "形容动词": .keiyouDoushi,
         "na": .keiyouDoushi,
@@ -46,6 +49,10 @@ class Config {
         "名詞": .meishi,
         "名词": .meishi,
         "n": .meishi,
+        
+        "副詞": .hukushi,
+        "副词": .hukushi,
+        "av": .hukushi,
     ]
     
     static let explanationPrefix = "$"

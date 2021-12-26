@@ -20,9 +20,11 @@ struct Goi: Codable {
         case godanDoushi = "五段動詞"
         case ichidanDoushi = "一段動詞"
         case sahenDoushi = "サ変動詞"
+        case kahenDoushi = "カ変動詞"
         case keiyouDoushi = "形容動詞"
         case keiyoushi = "形容詞"
         case meishi = "名詞"
+        case hukushi = "副詞"
         
     }
     

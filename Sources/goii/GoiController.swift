@@ -19,7 +19,9 @@ class GoiController {
         "\\undo": .undo,
         "\\u": .undo,
         "\\save": .save,
-        "\\s": .save
+        "\\s": .save,
+        "\\info": .info,
+        "\\i": .info,
     ]
     
     enum Focus {
@@ -37,6 +39,7 @@ class GoiController {
         case undo
         case quit
         case save
+        case info
     }
     
 }
@@ -117,8 +120,13 @@ extension GoiController {
                     IOController.log("Can not save because of empty label", .warning)
                 }
                 clear()
+                focus = .label
                 run()
                 
+            } else if (GoiController.commands[text] == .info) {
+                IOController.log(goi.toInfo())
+                IOController.log("")
+                run()
             }
 
         } else {

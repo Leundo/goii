@@ -11,3 +11,11 @@ swift build
 swift run
 ```
 
+
+
+## 发行
+
+```bash
+swift build --configuration release
+```
+
